@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="/static/styles.css">
+    <title>Lista de Productos</title>
+</head>
+<body>
+    <h2>Lista de Productos</h2>
+    <form action="/agregar" method="post">
+        <input type="text" name="nombre" placeholder="Nombre del producto" required>
+        <input type="number" name="precio" placeholder="Precio" required>
+        <button type="submit">Agregar Producto</button>
+    </form>
+
+    <ul>
+        {% for producto in productos %}
+            <li>
+                {{ producto[1] }} - ${{ producto[2] }}
+                <a href="/eliminar/{{ producto[0] }}"">Eliminar</a>
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
