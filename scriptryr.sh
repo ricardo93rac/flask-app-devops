@@ -1,1 +1,1 @@
-iusaFDIUbfu9basdifbaisfbiuasbf
+Script para tienda de tecnología
