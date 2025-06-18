@@ -1,1 +1,0 @@
-Script para tienda de tecnología
